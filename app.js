@@ -5,6 +5,15 @@ var layout = require('express-ejs-layouts')
 var mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 mongoose.connect('mongodb://localhost/donut-shop')
+console.log('the environment is on' + process.env.NODE_ENV);
+
+if(process.env.NODE_ENV === 'production') {
+// heroku mongo connection
+  mongoose.connect('mongodb://hensonth:abcabc123@ds061076.mlab.com:61076/wdi6-henson')
+} else {
+  //local host mongo connection
+  mongoose.connect('mongodb://localhost/donut-shop')
+}
 
 app.set('view engine', 'ejs')
 app.use(layout)
