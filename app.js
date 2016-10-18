@@ -4,7 +4,7 @@ var layout = require('express-ejs-layouts')
 
 var mongoose = require('mongoose')
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://localhost/donut-shop')
+// mongoose.connect('mongodb://localhost/donut-shop')
 console.log('the environment is on' + process.env.NODE_ENV);
 
 if(process.env.NODE_ENV === 'production') {
