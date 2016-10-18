@@ -9,7 +9,7 @@ console.log('the environment is on' + process.env.NODE_ENV);
 
 if(process.env.NODE_ENV === 'production') {
 // heroku mongo connection
-  mongoose.connect('mongodb://hensonth:abcabc123@ds061076.mlab.com:61076/wdi6-henson')
+  mongoose.connect('mongodb://hensonth:abcabc123@ds061076.mlab.com:61076/wdi6-henson/donuts')
   console.log('connected')
 } else {
   //local host mongo connection
