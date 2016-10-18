@@ -27,5 +27,5 @@ var ajaxRoutes = require('./routes/donuts_api')
 app.use('/donuts', frontendRoutes) // only render ejs files
 app.use('/api/donuts', ajaxRoutes) // only handle ajax request
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
 console.log('Server started')
